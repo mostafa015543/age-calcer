@@ -1,0 +1,36 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+}
+
+#body {
+    background-color: #f0e0c9;
+    color: #493426;
+}
+
+#h1 {
+    color: #493426;
+}
+.div2{
+    background-color: #f8edd9;
+}
+
+#input1,
+#input2,
+#input3{
+    background-color: #f5ecdb
+}
+
+
+
+
+
+
+
+
+
+
+
