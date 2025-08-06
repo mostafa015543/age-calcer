@@ -19,11 +19,17 @@ let today = new Date();
 
 page2.style.display = "none"
 btn_day.addEventListener("click", function () {
-    if(day.value <=0 ||day.value >30 || month.value >12 || month.value<=0 || year.value <=0 || year.value >today){
+    if (day.value <= 0 || day.value > 30 || month.value > 12 || month.value <= 0 || year.value <= 0 || year.value > today ||year.value > 1900) {
         alert("day or month or year is false, Try again")
         window.ReferenceError;
         location.reload()
+    } else if (!Number.isInteger(day.value ) ||
+        !Number.isInteger(month.value) ||
+        !Number.isInteger(year.value)) {
+        alert("Please enter valid integer values for day, month, and year.");
+        location.reload();
     }
+
     page1.style.display = "none";
     page2.style.display = "block";
     let d = parseInt(day.value);
@@ -35,15 +41,20 @@ btn_day.addEventListener("click", function () {
     let diff = today - birthDate;
 
     let days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    p.textContent=`you have ${days} day`;
+    p.textContent = `you have ${days} day`;
 });
 
 ///////////////////////////////شهووووووووووووووووووووووووور
 btn_month.addEventListener("click", function () {
-    if(day.value <=0 ||day.value >30 || month.value >12 || month.value<=0 || year.value <=0 || year.value >today){
+    if (day.value <= 0 || day.value > 30 || month.value > 12 || month.value <= 0 || year.value <= 0 || year.value > today ||year.value > 1900) {
         alert("day or month or year is false, Try again")
         window.ReferenceError;
         location.reload()
+    } else if (!Number.isInteger(day.value ) ||
+        !Number.isInteger(month.value) ||
+        !Number.isInteger(year.value)) {
+        alert("Please enter valid integer values for day, month, and year.");
+        location.reload();
     }
     page1.style.display = "none";
     page2.style.display = "block";
@@ -61,15 +72,20 @@ btn_month.addEventListener("click", function () {
         months--;
     }
 
-    p.textContent=`you have ${months} month`;
+    p.textContent = `you have ${months} month`;
 });
 
 
 btn_year.addEventListener("click", function () {
-    if(day.value <=0 ||day.value >30 || month.value >12 || month.value<=0 || year.value <=0 || year.value >today){
+    if (day.value <= 0 || day.value > 30 || month.value > 12 || month.value <= 0 || year.value <= 0 || year.value > today ||year.value > 1900) {
         alert("day or month or year is false, Try again")
         window.ReferenceError;
         location.reload()
+    } else if (!Number.isInteger(day.value ) ||
+        !Number.isInteger(month.value) ||
+        !Number.isInteger(year.value)) {
+        alert("Please enter valid integer values for day, month, and year.");
+        location.reload();
     }
     page1.style.display = "none";
     page2.style.display = "block";
@@ -87,14 +103,19 @@ btn_year.addEventListener("click", function () {
         years--;
     }
 
-    p.textContent=`you have ${years} year`;
+    p.textContent = `you have ${years} year`;
 });
 ///////////////////////////////////////////////////////////
 btn_zodiac.addEventListener("click", function () {
-    if(day.value <=0 ||day.value >30 || month.value >12 || month.value<=0 || year.value <=0 || year.value >today){
+    if (day.value <= 0 || day.value > 30 || month.value > 12 || month.value <= 0 || year.value <= 0 || year.value > today || year.value > 1900) {
         alert("day or month or year is false, Try again")
         window.ReferenceError;
         location.reload()
+    } else if (!Number.isInteger(day.value ) ||
+        !Number.isInteger(month.value) ||
+        !Number.isInteger(year.value)) {
+        alert("Please enter valid integer values for day, month, and year.");
+        location.reload();
     }
     page1.style.display = "none";
     page2.style.display = "block";
@@ -131,7 +152,7 @@ btn_zodiac.addEventListener("click", function () {
         zodiac = "غير معروف";
     }
 
-    p.textContent=`you are a ${zodiac} zodiac`;
+    p.textContent = `you are a ${zodiac} zodiac`;
 });
 ///////////////////////////////////////////////////////////
 btn_back.addEventListener("click", function () {
