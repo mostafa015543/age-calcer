@@ -19,6 +19,11 @@ let today = new Date();
 
 page2.style.display = "none"
 btn_day.addEventListener("click", function () {
+    if(day.value <=0 ||day.value >30 || month.value >12 || month.value<=0 || year.value <=0 || year.value >today){
+        alert("day or month or year is false, Try again")
+        window.ReferenceError;
+        location.reload()
+    }
     page1.style.display = "none";
     page2.style.display = "block";
     let d = parseInt(day.value);
@@ -35,6 +40,11 @@ btn_day.addEventListener("click", function () {
 
 ///////////////////////////////شهووووووووووووووووووووووووور
 btn_month.addEventListener("click", function () {
+    if(day.value <=0 ||day.value >30 || month.value >12 || month.value<=0 || year.value <=0 || year.value >today){
+        alert("day or month or year is false, Try again")
+        window.ReferenceError;
+        location.reload()
+    }
     page1.style.display = "none";
     page2.style.display = "block";
     let d = parseInt(day.value);
@@ -56,6 +66,11 @@ btn_month.addEventListener("click", function () {
 
 
 btn_year.addEventListener("click", function () {
+    if(day.value <=0 ||day.value >30 || month.value >12 || month.value<=0 || year.value <=0 || year.value >today){
+        alert("day or month or year is false, Try again")
+        window.ReferenceError;
+        location.reload()
+    }
     page1.style.display = "none";
     page2.style.display = "block";
 
@@ -76,6 +91,11 @@ btn_year.addEventListener("click", function () {
 });
 ///////////////////////////////////////////////////////////
 btn_zodiac.addEventListener("click", function () {
+    if(day.value <=0 ||day.value >30 || month.value >12 || month.value<=0 || year.value <=0 || year.value >today){
+        alert("day or month or year is false, Try again")
+        window.ReferenceError;
+        location.reload()
+    }
     page1.style.display = "none";
     page2.style.display = "block";
     const d = parseInt(day.value);
